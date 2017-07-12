@@ -1,0 +1,22 @@
+# Site Settings
+title: Trian666le
+email: bettadevindonesia@gmail.com
+description: >
+  Trian666le is a small company Design and Programming.
+  We are Designer and Developer.
+baseurl: "/"
+url: ""
+twitter_username: trojan302
+github_username:  trian666le
+
+# Build Settings
+plugins_dir:
+- jekyll-coffeescript
+- jekyll-watch
+- jekyll-assets
+sass:
+  sass_dir: _sass
+include:
+- _pages
+kramdown:
+  input: GFM

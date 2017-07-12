@@ -1,0 +1,28 @@
+<aside>
+	<nav>
+		<ul>
+			{% for page in site.pages %} {% if page.title %}
+			<li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+			{% endif %} {% endfor %}
+			<li><a href="{{ "/blog" | prepend: site.baseurl }}">Blog</a></li>
+		</ul>
+		<span class="brand-icon">
+			<a href="{{ site.url }}">TRIAN666LE</a>
+		</span>
+	</nav>
+</aside>
+
+<header>
+
+	<h2>< TRIAN666LE /></h2>
+	
+	<div class="slogan-sosial">
+		
+		<span class="icon-sosial"> <i class="fa fa-facebook-square"></i> Facebook </span>
+		<span class="icon-sosial"> <i class="fa fa-github-square"></i> Github </span>
+		<span class="icon-sosial"> <i class="fa fa-envelope-o"></i> Gmail </span>
+
+	</div>
+
+</header>
+ 
