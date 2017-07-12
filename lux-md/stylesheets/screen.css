@@ -1,0 +1,16 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css?family=Gruppo");
+/* Normalize */
+/* line 2, ../sass/partials/_base.scss */
+body {
+  font-family: "Gruppo", cursive;
+  margin: 0;
+  padding: 0;
+  color: #222222;
+}
+
+/* line 1, ../sass/components/_navbar.scss */
+.navbar-default {
+  background-color: #222;
+  color: #fff !important;
+}
