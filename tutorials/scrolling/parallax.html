@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Scrolling Effect</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<style type="text/css">
+		body{
+			padding-top: 70px;
+		}
+		.page1,.page2,.page3,.page4,.page5{
+			padding-top: 70px;
+			margin-bottom: 70px;
+		}
+		.page1{text-align:center;background-color: red;height: 600px;padding:5px 0px;}
+		.page2{text-align:center;background-color: green;height: 600px;padding:5px 0px;}
+		.page3{text-align:center;background-color: blue;height: 600px;padding:5px 0px;}
+		.page4{text-align:center;background-color: purple;height: 600px;padding:5px 0px;}
+		.page5{text-align:center;background-color: pink;height: 600px;padding:5px 0px;}
+	</style>
+</head>
+<body id="home">
+
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#home">Brand</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#service">Service</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div id="home" class="page1">
+	<h1 class="wow slideInLeft">Content to Reveal Here</h1>
+</div>
+
+<div id="about" class="page2">
+	<h1 class="wow slideInRight">Content to Reveal Here</h1>
+</div>
+
+<div id="service" class="page3">
+	<h1 class="wow slideInUp">Content to Reveal Here</h1>
+</div>
+
+<div id="contact" class="page4">
+	<h1 class="wow slideInDown">Content to Reveal Here</h1>
+</div>
+
+<div id="portfolio" class="page5">
+	<h1 class="wow flash">Content to Reveal Here</h1>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script type="text/javascript" src="wow.min.js"></script>
+<script type="text/javascript">
+
+	$(document).ready(function(){
+
+	new WOW().init();
+  
+	  $('.nav li a').click(function() {
+	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+
+	      var $target = $(this.hash);
+
+	      $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
+
+	      if ($target.length) {
+
+	        var targetOffset = $target.offset().top;
+
+	        $('html,body').animate({scrollTop: targetOffset}, 2000);
+
+	       	return false;
+	      }
+	    }
+	  });
+
+});
+</script>
+</body>
+</html>
